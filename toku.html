@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///Users/sai/Downloads/tokushoho.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表記 | INDIGO COFFEE WORKS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./toku_files/css2" rel="stylesheet">
+<style>
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #EDE5D5;
+  --brown-light: #C4A882;
+  --brown: #8B6B47;
+  --brown-dark: #5C4230;
+  --espresso: #2C1A0E;
+  --text: #3A2A1A;
+  --text-muted: #7A6550;
+  --white: #FDFAF5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+/* HEADER */
+.page-header {
+  background: var(--espresso);
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(196,168,130,0.6);
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--brown-light); }
+
+.page-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.page-header p {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: rgba(196,168,130,0.5);
+}
+
+/* MAIN */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* TABLE SECTION */
+.law-section {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  margin-bottom: 40px;
+}
+
+.law-section-title {
+  background: var(--espresso);
+  padding: 16px 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+}
+
+.law-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.law-table tr {
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.law-table tr:last-child { border-bottom: none; }
+
+.law-table th {
+  width: 200px;
+  padding: 20px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: left;
+  vertical-align: top;
+  background: rgba(196,168,130,0.08);
+  border-right: 1px solid var(--cream-dark);
+  white-space: nowrap;
+}
+
+.law-table td {
+  padding: 20px 32px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.law-table td a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+.law-table td a:hover { text-decoration: underline; }
+
+/* COOLING OFF */
+.cooling-section {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  margin-bottom: 40px;
+}
+
+.cooling-inner { padding: 40px 32px; }
+
+.cooling-item {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.cooling-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cooling-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--espresso);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.cooling-item-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--brown-light);
+  line-height: 1.2;
+  min-width: 24px;
+}
+
+.cooling-item-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  padding-left: 34px;
+}
+
+/* NOTICE */
+.notice-box {
+  background: rgba(139,107,71,0.07);
+  border-left: 3px solid var(--brown-light);
+  padding: 20px 24px;
+  margin-top: 8px;
+  margin-left: 34px;
+}
+
+.notice-box p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  background: var(--espresso);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: rgba(245,240,232,0.5);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--brown-light); }
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(245,240,232,0.2);
+}
+
+@media (max-width: 600px) {
+  .law-table { display: block; }
+  .law-table tbody, .law-table tr { display: block; }
+  .law-table th {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--cream-dark);
+    white-space: normal;
+  }
+  .law-table td { display: block; padding: 16px 20px; }
+  .cooling-inner { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div>
+    <a href="file:///Users/sai/Downloads/sales-page.html" class="back-link">← 商品ページへ戻る</a>
+  </div>
+  <h1>特定商取引法に基づく表記</h1>
+  <p>Specified Commercial Transactions Act</p>
+</div>
+
+<main>
+
+  <div class="law-section">
+    <div class="law-section-title">販売事業者情報</div>
+    <table class="law-table">
+      <tbody>
+        <tr>
+          <th>販売業者</th>
+          <td>株式会社INDIGO COFFEE WORKS</td>
+        </tr>
+        <tr>
+          <th>代表責任者</th>
+          <td>市川 誠大</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>〒133-0057<br>東京都江戸川区西小岩1-28-18 ケイエスビル１F</td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td>03-5655-9143<br><span style="font-size:12px; color: var(--text-muted);">※お問い合わせはメールにてお願いします</span></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><a href="mailto:info@afroaster.com">info@afroaster.com</a></td>
+        </tr>
+        <tr>
+          <th>ウェブサイト</th>
+          <td><a href="https://afroaster.com/" target="_blank">https://afroaster.com</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="law-section">
+    <div class="law-section-title">商品・サービスについて</div>
+    <table class="law-table">
+      <tbody>
+        <tr>
+          <th>商品・サービス名</th>
+          <td>コーヒーショップ開業オンライン講座（全14講座）</td>
+        </tr>
+        <tr>
+          <th>販売価格</th>
+          <td>330,000円（消費税込み）</td>
+        </tr>
+        <tr>
+          <th>追加手数料</th>
+          <td>銀行振込の場合、振込手数料はお客様ご負担となります。</td>
+        </tr>
+        <tr>
+          <th>支払方法</th>
+          <td>クレジットカード（VISA・Mastercard・JCB・AMEX等）<br>銀行振込<br>その他決済会社所定の方法</td>
+        </tr>
+        <tr>
+          <th>支払時期</th>
+          <td>クレジットカード：ご注文時<br>銀行振込：ご注文後7日以内</td>
+        </tr>
+        <tr>
+          <th>商品の引渡し時期</th>
+          <td>デジタルコンテンツ・サービス：決済完了後、即時〜翌営業日までにご提供</td>
+        </tr>
+        <tr>
+          <th>返品・返金について</th>
+          <td>
+            商品の性質上、お客様都合による返品・返金は原則お受けできません。<br>
+            <span style="font-size:13px; color: var(--text-muted);">※初期不良や誤配送に限り、商品到着後7日以内にご連絡いただければ対応いたします。</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cooling-section">
+    <div class="law-section-title">クーリング・オフについて</div>
+    <div class="cooling-inner">
+      <div class="cooling-item">
+        <div class="cooling-item-title">
+          <span class="cooling-item-num">1</span>
+          クーリング・オフの適用
+        </div>
+        <p class="cooling-item-text">電話勧誘販売にてコンサルティングサービスをご契約いただいた場合、契約書面を受領した日から起算して8日以内であれば、書面または電磁的記録（メール等）により無条件で解約（クーリング・オフ）をすることができます。</p>
+      </div>
+      <div class="cooling-item">
+        <div class="cooling-item-title">
+          <span class="cooling-item-num">2</span>
+          効力の発生
+        </div>
+        <p class="cooling-item-text">クーリング・オフの通知を発信した時（郵便消印日付やメール送信日時）から効力が発生します。</p>
+      </div>
+      <div class="cooling-item">
+        <div class="cooling-item-title">
+          <span class="cooling-item-num">3</span>
+          費用の負担
+        </div>
+        <p class="cooling-item-text">クーリング・オフに伴う損害賠償や違約金の支払いは不要です。既に代金をお支払いいただいている場合は、速やかにその全額を返金いたします。また、サービスの提供が既に開始されている場合でも、その対価を支払う必要はありません。</p>
+      </div>
+      <div class="cooling-item">
+        <div class="cooling-item-title">
+          <span class="cooling-item-num">4</span>
+          通知先
+        </div>
+        <p class="cooling-item-text">下記の住所またはメールアドレス宛に通知を送信してください。</p>
+        <div class="notice-box">
+          <p>株式会社INDIGO COFFEE WORKS<br>
+          〒133-0057 東京都江戸川区西小岩1-28-18 ケイエスビル１F<br>
+          メール：<a href="mailto:info@afroaster.com" style="color: var(--brown);">info@afroaster.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-logo">INDIGO COFFEE WORKS</div>
+  <div class="footer-links">
+    <a href="file:///Users/sai/Downloads/sales-page.html">商品ページ</a>
+    <a href="file:///Users/sai/Downloads/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:info@afroaster.com">お問い合わせ</a>
+  </div>
+  <div class="footer-copy">© 2025 株式会社INDIGO COFFEE WORKS. All rights reserved.</div>
+</footer>
+
+
+
+</body></html>

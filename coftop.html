@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///Users/sai/Downloads/purchase_2.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご購入手続き | コーヒーショップ開業オンライン講座</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./coftop_files/css2" rel="stylesheet">
+<style>
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #EDE5D5;
+  --brown-light: #C4A882;
+  --brown: #8B6B47;
+  --brown-dark: #5C4230;
+  --espresso: #2C1A0E;
+  --text: #3A2A1A;
+  --text-muted: #7A6550;
+  --white: #FDFAF5;
+  --green: #2D6A4F;
+  --green-light: #40916C;
+  --border: #DDD5C5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--espresso);
+  padding: 0 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-header .logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.site-header .logo-sub {
+  font-size: 10px;
+  color: var(--brown-light);
+  letter-spacing: 0.15em;
+  font-weight: 300;
+}
+
+/* LAYOUT */
+.page-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* PAGE TITLE */
+.page-title-area {
+  grid-column: 1 / -1;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--espresso);
+  margin-bottom: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* LEFT COL */
+.left-col { display: flex; flex-direction: column; gap: 20px; }
+
+/* CARD */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  background: rgba(196,168,130,0.06);
+}
+
+.card-body { padding: 24px; }
+
+/* PRODUCT CARD */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-logo {
+  width: 56px;
+  height: 56px;
+  background: var(--espresso);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  color: var(--brown-light);
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--espresso);
+  margin-bottom: 4px;
+}
+
+.product-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background: var(--cream);
+  padding: 14px 20px;
+  border-radius: 3px;
+}
+
+.product-price-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.product-price-amount {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--espresso);
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.product-price-amount .price-tax {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* CURRICULUM */
+.curriculum-item {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.curriculum-item:last-child { border-bottom: none; padding-bottom: 0; }
+.curriculum-item:first-child { padding-top: 0; }
+
+.curriculum-num {
+  width: 28px;
+  height: 28px;
+  background: var(--espresso);
+  color: var(--brown-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.curriculum-body { flex: 1; }
+
+.curriculum-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--espresso);
+  margin-bottom: 6px;
+}
+
+.curriculum-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.lesson-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lesson-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 2px;
+}
+
+/* ACCORDION */
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.accordion-toggle {
+  width: 100%;
+  background: var(--cream);
+  border: none;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.accordion-toggle:hover { background: var(--cream-dark); }
+
+.accordion-arrow {
+  font-size: 10px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.accordion-toggle.open .accordion-arrow { transform: rotate(180deg); }
+
+.accordion-content {
+  display: none;
+  padding: 14px 16px;
+  background: var(--white);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  border-top: 1px solid var(--border);
+}
+
+.accordion-content.open { display: block; }
+
+/* SERVICE PERIOD ROW */
+.service-period-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.service-period-label { color: var(--text-muted); font-weight: 400; }
+.service-period-val { color: var(--espresso); font-weight: 500; }
+
+/* PAYMENT METHOD */
+.payment-group { margin-bottom: 16px; }
+
+.payment-group-title {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.payment-arrow {
+  font-size: 10px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.payment-arrow.open { transform: rotate(90deg); }
+
+.card-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card-logo {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--white);
+}
+
+/* SECURITY */
+.security-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.ssl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--cream);
+}
+
+.ssl-lock { font-size: 14px; color: var(--brown); }
+
+.ssl-text { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+.ssl-text strong { color: var(--text); display: block; font-size: 12px; }
+
+.disclaimer {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  line-height: 1.8;
+}
+
+/* RIGHT COL — STICKY SUMMARY */
+.right-col {
+  position: sticky;
+  top: 24px;
+}
+
+.summary-card {
+  background: var(--espresso);
+  border-radius: 4px;
+  overflow: hidden;
+  color: var(--cream);
+}
+
+.summary-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(196,168,130,0.15);
+}
+
+.summary-header-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brown-light);
+  letter-spacing: 0.1em;
+}
+
+.summary-body { padding: 24px; }
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.summary-row-label { color: rgba(245,240,232,0.55); }
+.summary-row-val { color: var(--cream); font-weight: 400; text-align: right; }
+
+.summary-divider {
+  height: 1px;
+  background: rgba(196,168,130,0.15);
+  margin: 20px 0;
+}
+
+.summary-total-label {
+  font-size: 12px;
+  color: rgba(245,240,232,0.5);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.summary-total-amount {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.summary-total-suffix {
+  font-size: 11px;
+  color: rgba(245,240,232,0.4);
+  margin-bottom: 24px;
+}
+
+.payment-select-label {
+  font-size: 11px;
+  color: rgba(196,168,130,0.6);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.card-logos-dark {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.card-logo-dark {
+  padding: 4px 10px;
+  border: 1px solid rgba(196,168,130,0.2);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(245,240,232,0.6);
+}
+
+.btn-credit {
+  display: block;
+  width: 100%;
+  background: var(--brown);
+  color: var(--cream);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 15px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-credit:hover { background: var(--brown-dark); transform: translateY(-1px); }
+
+.btn-or {
+  text-align: center;
+  font-size: 11px;
+  color: rgba(245,240,232,0.3);
+  margin: 10px 0;
+  letter-spacing: 0.2em;
+}
+
+.btn-bank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: transparent;
+  color: var(--cream);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 14px 20px;
+  text-align: center;
+  border: 1px solid rgba(196,168,130,0.35);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.btn-bank:hover { border-color: var(--brown-light); background: rgba(196,168,130,0.07); }
+
+.btn-icon {
+  font-size: 16px;
+}
+
+.summary-note {
+  font-size: 11px;
+  color: rgba(245,240,232,0.3);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--brown); }
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--cream-dark);
+}
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .page-wrap {
+    grid-template-columns: 1fr;
+  }
+  .right-col { position: static; order: -1; }
+  .page-title-area { order: -2; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="file:///Users/sai/Downloads/sales-page.html" class="logo">
+    INDIGO COFFEE WORKS
+  </a>
+  <span class="logo-sub">コーヒーショップ開業講座</span>
+</header>
+
+<!-- MAIN -->
+<div class="page-wrap">
+
+  <!-- PAGE TITLE -->
+  <div class="page-title-area">
+    <h1 class="page-title">ご購入手続きに進む</h1>
+    <p class="page-subtitle">注文する商品をご確認いただき、ご希望の決済方法のボタンを押して次にお進みください。</p>
+  </div>
+
+  <!-- LEFT COLUMN -->
+  <div class="left-col">
+
+    <!-- PRODUCT -->
+    <div class="card">
+      <div class="card-header">注文する商品</div>
+      <div class="card-body">
+        <div class="product-info">
+          <div class="product-logo">
+            <div class="product-logo-text">INDIGO<br>COFFEE<br>WORKS</div>
+          </div>
+          <div>
+            <div class="product-name">コーヒーショップ開業オンライン講座</div>
+            <div class="product-desc">全14講座 + 補講動画11本 + 素材集</div>
+          </div>
+        </div>
+        <div class="product-price-row">
+          <span class="product-price-label">受講料</span>
+          <span class="product-price-amount">¥330,000<span class="price-tax">（税込）</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURRICULUM -->
+    <div class="card">
+      <div class="card-header">本商品に含まれる内容</div>
+      <div class="card-body">
+
+        <!-- Lesson 1 -->
+        <div class="curriculum-item">
+          <div class="curriculum-num">1</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">基礎編：マインドセットとコーヒーの世界</div>
+            <div class="curriculum-desc">夢を現実にする第一歩から、コーヒー豆の基礎知識まで。開業を目指す上で欠かせない思考基盤を築きます。</div>
+            <div class="lesson-tags">
+              <span class="lesson-tag">マインドセット</span>
+              <span class="lesson-tag">ミニマムスタート</span>
+              <span class="lesson-tag">コーヒー豆の基礎</span>
+              <span class="lesson-tag">仕入れの考え方</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 2 -->
+        <div class="curriculum-item">
+          <div class="curriculum-num">2</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">焙煎編：自家焙煎の基本から実践まで</div>
+            <div class="curriculum-desc">コーヒーの味は仕入れと焙煎で決まります。焙煎機の選び方から実際の焙煎設備まで徹底解説。</div>
+            <div class="accordion-item">
+              <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                焙煎の基本から実践まで <span class="accordion-arrow">▼</span>
+              </button>
+              <div class="accordion-content">自家焙煎の工程・ポイントを丁寧に解説。失敗しない焙煎プロファイルの作り方も学べます。</div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                コーヒー焙煎機の選び方 <span class="accordion-arrow">▼</span>
+              </button>
+              <div class="accordion-content">予算・規模・目標に合わせた焙煎機の選び方。各機種の特徴と比較を実例を交えて紹介します。</div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                焙煎設備の選び方 <span class="accordion-arrow">▼</span>
+              </button>
+              <div class="accordion-content">店舗に設置する焙煎設備の選定基準と、工事・申請に関わる実務的な知識を解説します。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 3 -->
+        <div class="curriculum-item">
+          <div class="curriculum-num">3</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">開業実務編：テナント・内装・マーケティング</div>
+            <div class="curriculum-desc">リスクを最小限に抑えながら開業するための実務知識。テナント選定から内装工事まで現場目線で解説。</div>
+            <div class="lesson-tags">
+              <span class="lesson-tag">テナントの探し方</span>
+              <span class="lesson-tag">内装工事の選び方</span>
+              <span class="lesson-tag">マーケティング</span>
+              <span class="lesson-tag">商品開発</span>
+              <span class="lesson-tag">クリエイティブ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 4 -->
+        <div class="curriculum-item">
+          <div class="curriculum-num">4</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">売上づくり編：物販・豆売り・開業法律</div>
+            <div class="curriculum-desc">実店舗でのコーヒー豆販売で売上を作る方法、物販商材の選定、そして開業に関わる法律の全てをカバー。</div>
+            <div class="lesson-tags">
+              <span class="lesson-tag">コーヒー豆販売</span>
+              <span class="lesson-tag">物販商材</span>
+              <span class="lesson-tag">開業に関わる法律</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-period-row">
+          <span class="service-period-label">サービス提供期間</span>
+          <span class="service-period-val">6ヶ月間</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BONUS -->
+    <div class="card">
+      <div class="card-header">ボーナスコンテンツ</div>
+      <div class="card-body">
+        <div class="curriculum-item">
+          <div class="curriculum-num" style="background: var(--brown); font-size:10px;">+</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">補講動画 11本</div>
+            <div class="curriculum-desc">開業のリアルな実例・現場で起きることをそのままお届けするベット動画集。</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num" style="background: var(--brown); font-size:10px;">+</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">商品づくりノウハウ・素材集</div>
+            <div class="curriculum-desc">すぐに使えるテンプレートや素材。制作コストと時間を大幅に削減できます。</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num" style="background: var(--brown); font-size:10px;">+</div>
+          <div class="curriculum-body">
+            <div class="curriculum-title">不定期オンライン・オフラインイベント</div>
+            <div class="curriculum-desc">受講生限定のイベントへの参加権。リアルなコミュニティで繋がれます。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT METHOD -->
+    <div class="card">
+      <div class="card-header">支払方法</div>
+      <div class="card-body">
+        <div class="payment-group">
+          <div class="payment-group-title">
+            <span class="payment-arrow open">▶</span> クレジットカード
+          </div>
+          <div class="card-logos">
+            <span class="card-logo">VISA</span>
+            <span class="card-logo">Master</span>
+            <span class="card-logo">AMEX</span>
+            <span class="card-logo">JCB</span>
+          </div>
+        </div>
+        <div class="payment-group" style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
+          <div class="payment-group-title">
+            <span class="payment-arrow open">▶</span> 銀行振込
+          </div>
+          <p style="font-size:12px; color:var(--text-muted);">ご注文後7日以内にお振込みください。振込手数料はお客様ご負担となります。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="card">
+      <div class="card-header">安全のための取り組み　SSL暗号化</div>
+      <div class="card-body">
+        <p class="security-text">ご注文者情報はSSL暗号化技術を利用して厳重に送信いたします。ご入力いただいたカード情報は決済代行会社に委託しており、当社では保存されませんのでご安心ください。万が一不都合と判断した場合はご購入をお断りさせていただくことがございます。予めご了承ください。</p>
+        <div class="ssl-badge">
+          <span class="ssl-lock">🔒</span>
+          <div class="ssl-text">
+            <strong>SSL暗号化通信</strong>
+            Secure · HTTPS対応
+          </div>
+        </div>
+        <p class="disclaimer">本商品は、必ずしも購入者様の利益や効果を保証したものではございません。</p>
+      </div>
+    </div>
+
+  </div><!-- /left-col -->
+
+  <!-- RIGHT COLUMN — SUMMARY -->
+  <div class="right-col">
+    <div class="summary-card">
+      <div class="summary-header">
+        <div class="summary-header-title">お支払い内容の確認</div>
+      </div>
+      <div class="summary-body">
+        <div class="summary-row">
+          <span class="summary-row-label">商品名</span>
+          <span class="summary-row-val">コーヒーショップ<br>開業オンライン講座</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row-label">商品価格</span>
+          <span class="summary-row-val">330,000円（税込）</span>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total-label">お支払い金額</div>
+        <div class="summary-total-amount">¥330,000</div>
+        <div class="summary-total-suffix">税込</div>
+
+        <div class="payment-select-label">お支払い方法の選択</div>
+        <div class="card-logos-dark">
+          <span class="card-logo-dark">VISA</span>
+          <span class="card-logo-dark">Master</span>
+          <span class="card-logo-dark">AMEX</span>
+          <span class="card-logo-dark">JCB</span>
+        </div>
+
+        <a href="https://manager.the-online-class.com/courses/oUDM0kDI6MGb" class="btn-credit">
+          <span class="btn-icon">💳</span>
+          クレジットカードで申し込む
+        </a>
+
+        <div class="btn-or">または</div>
+
+        <a href="mailto:info@afroaster.com?subject=%E9%8A%80%E8%A1%8C%E6%8C%AF%E8%BE%BC%E3%81%A7%E3%81%AE%E5%8F%97%E8%AC%9B%E7%94%B3%E8%BE%BC%E3%81%BF" class="btn-bank">
+          <span class="btn-icon">🏦</span>
+          銀行振込で申し込む
+        </a>
+
+        <p class="summary-note">本商品は、必ずしも購入者様の利益や<br>効果を保証したものではございません。</p>
+      </div>
+    </div>
+  </div><!-- /right-col -->
+
+</div><!-- /page-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="file:///Users/sai/Downloads/tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="file:///Users/sai/Downloads/privacy.html">プライバシーポリシー</a>
+    <a href="file:///Users/sai/Downloads/sales-page.html">商品ページへ戻る</a>
+  </div>
+  <div class="footer-copy">©2025 株式会社INDIGO COFFEE WORKS</div>
+</footer>
+
+<script>
+function toggleAccordion(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  content.classList.toggle('open', !isOpen);
+}
+</script>
+
+
+</body></html>
